@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
 		if @article.save
 			session = GoogleDrive::Session.from_config("config.json")
 			ws = session.spreadsheet_by_key("1klCFgSwetuuQlkM4llE2hjXQcVZX-wUNkDaWWoVs7ds").worksheets[0]
+			ws[(ws.rows.length + 1), 1] = :articleUrl
 			render json: @article
 		else
 			render json: @article.errors, status: :unprocessable_entity
