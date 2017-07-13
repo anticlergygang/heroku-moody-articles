@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  articleUrl: MyString
+  status: MyString
+  moodMusicURL: MyString
+
+two:
+  articleUrl: MyString
+  status: MyString
+  moodMusicURL: MyString

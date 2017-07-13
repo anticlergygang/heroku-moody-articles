@@ -1,0 +1,107 @@
+I"'(function() {
+  this.ArticleForm = React.createClass({
+    getInitialState: function() {
+      return {
+        articleURL: ''
+      };
+    },
+    handleValueChange: function(e) {
+      var obj, valueName;
+      valueName = e.target.name;
+      return this.setState((
+        obj = {},
+        obj["" + valueName] = e.target.value,
+        obj["status"] = "process",
+        obj
+      ));
+    },
+    valid: function() {
+      return this.state.articleURL;
+    },
+    handleSubmit: function(e) {
+      e.preventDefault();
+      return $.post('', {
+        article: this.state
+      }, (function(_this) {
+        return function(data) {
+          _this.props.handleNewArticle(data);
+          return _this.setState(_this.getInitialState());
+        };
+      })(this), 'JSON');
+    },
+    render: function() {
+      return React.DOM.form({
+        className: 'form-in',
+        onSubmit: this.handleSubmit
+      }, React.DOM.div({
+        className: 'form-group'
+      }, React.DOM.input({
+        type: 'text',
+        className: 'form-control',
+        placeholder: 'Enter an articles URL to get some mood music!',
+        name: 'articleURL',
+        value: this.state.articleURL,
+        onChange: this.handleValueChange
+      })), React.DOM.button({
+        type: 'submit',
+        className: 'btn btn-primary',
+        disabled: !this.valid()
+      }, 'Find mood music!'));
+    }
+  });
+
+  this.ArticleForm = React.createClass({
+    getInitialState: function() {
+      return {
+        articleURL: ''
+      };
+    },
+    handleValueChange: function(e) {
+      var obj, valueName;
+      valueName = e.target.name;
+      return this.setState((
+        obj = {},
+        obj["" + valueName] = e.target.value,
+        obj["status"] = "process",
+        obj
+      ));
+    },
+    valid: function() {
+      return this.state.articleURL;
+    },
+    handleSubmit: function(e) {
+      e.preventDefault();
+      return $.post('', {
+        article: this.state
+      }, (function(_this) {
+        return function(data) {
+          _this.props.handleNewArticle(data);
+          return _this.setState(_this.getInitialState());
+        };
+      })(this), 'JSON');
+    },
+    render: function() {
+      return React.DOM.form({
+        className: 'form-input',
+        onSubmit: this.handleSubmit
+      }, React.DOM.div({
+        className: 'input-group'
+      }, React.DOM.input({
+        type: 'text',
+        className: 'form-control',
+        placeholder: 'Enter an articles URL to get some mood music!',
+        name: 'articleURL',
+        value: this.state.articleURL,
+        onChange: this.handleValueChange
+      }), React.DOM.span({
+        className: 'input-group-button'
+      }, React.DOM.button({
+        className: 'btn btn-danger',
+        type: 'submit',
+        disabled: !this.valid()
+      }, 'Search for some music!'))));
+    }
+  });
+
+}).call(this);
+:ET

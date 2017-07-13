@@ -1,0 +1,27 @@
+# Gets the google drive session
+#session = GoogleDrive::Session.from_config("config.json")
+
+# Gets the public work sheet for this project by key
+#ws = session.spreadsheet_by_key("1klCFgSwetuuQlkM4llE2hjXQcVZX-wUNkDaWWoVs7ds").worksheets[0]
+
+# Gets content of ColRow cell.
+#p ws[Row, Col]
+
+# Sets the content of ColRow cell
+#ws[1, 1] = "content"
+
+# Commits the changes to cells
+#ws.save
+
+# Dumps all cells.
+#(1..ws.num_rows).each do |row|
+#  (1..ws.num_cols).each do |col|
+#    p ws[row, col]
+#  end
+#end
+
+# Dumps all cells.
+#p ws.rows
+
+# Reloads the worksheet to get changes by other clients.
+# ws.reload

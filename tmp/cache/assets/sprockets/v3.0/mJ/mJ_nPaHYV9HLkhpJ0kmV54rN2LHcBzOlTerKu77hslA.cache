@@ -1,0 +1,48 @@
+I"~(function() {
+  this.Articles = React.createClass({
+    getInitialState: function() {
+      return {
+        articles: this.props.data
+      };
+    },
+    getDefaultProps: function() {
+      return {
+        articles: []
+      };
+    },
+    addArticle: function(article) {
+      var articles;
+      articles = this.state.articles.slice();
+      articles.push(article);
+      return this.setState({
+        articles: articles
+      });
+    },
+    render: function() {
+      var article;
+      return React.DOM.div({
+        className: 'articles'
+      }, React.DOM.h3({
+        className: 'title'
+      }, 'Enter the URL of a blog article and we will find you some music to listen to while you read.'), React.createElement(ArticleForm, {
+        handelNewArticle: this.addArticle
+      }), React.DOM.table({
+        className: 'table table-bordered'
+      }, React.DOM.thead(null), React.DOM.th(null, "Article URL"), React.DOM.th(null, "Status"), React.DOM.th(null, "Mood Music URL"), React.DOM.tbody(null, (function() {
+        var i, len, ref, results;
+        ref = this.state.articles;
+        results = [];
+        for (i = 0, len = ref.length; i < len; i++) {
+          article = ref[i];
+          results.push(React.createElement(Article, {
+            key: article.id,
+            article: article
+          }));
+        }
+        return results;
+      }).call(this))));
+    }
+  });
+
+}).call(this);
+:ET

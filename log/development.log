@@ -1,0 +1,489 @@
+
+
+Started GET "/" for ::1 at 2017-07-13 05:19:15 -0400
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/anti/.rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/anti/.rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.8) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.8) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.8) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.8) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+  puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+  puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+  puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+  puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.5ms)
+
+
+Started GET "/" for ::1 at 2017-07-13 05:26:35 -0400
+
+ActiveRecord::NoDatabaseError (FATAL:  database "ruby-getting-started_development" does not exist
+):
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/anti/.rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/anti/.rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/monitor.rb:214:in `mon_synchronize'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
+  activerecord (4.2.8) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.8) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.8) lib/active_record/migration.rb:383:in `connection'
+  activerecord (4.2.8) lib/active_record/migration.rb:370:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+  puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+  puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+  puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+  puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
+
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.1ms)
+  [1m[36mSQL (2.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (24.8ms)[0m  CREATE TABLE "widgets" ("id" serial primary key, "name" character varying, "description" text, "stock" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (13.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140707111715')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.2ms)[0m  CREATE TABLE "widgets" ("id" serial primary key, "name" character varying, "description" text, "stock" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140707111715')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateArticles (20170713092850)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (15.8ms)[0m  [1mCREATE TABLE "articles" ("id" serial primary key, "articleUrl" character varying, "status" character varying, "moodMusicURL" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20170713092850"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (18.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'articles'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (3.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'widgets'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for ::1 at 2017-07-13 05:40:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (4.5ms)
+Completed 200 OK in 42ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-07-13 05:43:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/railties-4.2.8/lib/rails/templates/rails/welcome/index.html.erb (1.5ms)
+Completed 200 OK in 20ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:43:18 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (6.5ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 7.3ms)
+
+ActionView::Template::Error (couldn't find file 'rails-ujs' with type 'application/javascript'
+Checked in these paths: 
+  /Users/anti/GitHub/heroku-moody-articles/app/assets/images
+  /Users/anti/GitHub/heroku-moody-articles/app/assets/javascripts
+  /Users/anti/GitHub/heroku-moody-articles/app/assets/stylesheets
+  /Users/anti/GitHub/heroku-moody-articles/vendor/assets/javascripts
+  /Users/anti/GitHub/heroku-moody-articles/vendor/assets/stylesheets
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/tether-rails-1.4.0/vendor/assets/javascripts
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/tether-rails-1.4.0/vendor/assets/stylesheets
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/coffee-rails-4.0.1/lib/assets/javascripts
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/react-rails-2.2.1/lib/assets/react-source/development
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/react-rails-2.2.1/lib/assets/javascripts
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/bootstrap-4.0.0.alpha6/assets/stylesheets
+  /Users/anti/.rvm/gems/ruby-2.3.4/gems/bootstrap-4.0.0.alpha6/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Ruby Getting Started on Heroku</title>
+    5:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    6:   <%= stylesheet_link_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' %>
+    7:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    8:   <%= javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
+  app/assets/javascripts/application.js:14
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___4501592052483968203_70141427572020'
+
+
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.4ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:44:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (2.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 3275ms (Views: 3262.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/rails-ujs.self-01c6512d4e8bdd51de0acb7cb39b7111f1fc4611b16793448eef4dad0597ab6f.js?body=1" for ::1 at 2017-07-13 05:44:27 -0400
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2017-07-13 05:44:27 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-07-13 05:44:27 -0400
+
+
+Started GET "/assets/widgets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-07-13 05:44:27 -0400
+
+
+Started GET "/assets/application.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-07-13 05:44:27 -0400
+
+
+Started POST "/articles" for ::1 at 2017-07-13 05:45:02 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleURL"=>"lol", "status"=>"process"}}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'articleURL' for Article.):
+  app/controllers/articles_controller.rb:3:in `create'
+
+
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (64.4ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 05:45:05 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleURL"=>"lol", "status"=>"process"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'articleURL' for Article.):
+  app/controllers/articles_controller.rb:3:in `create'
+
+
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/anti/.rvm/gems/ruby-2.3.4/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (40.1ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:45:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 886ms (Views: 866.6ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (20.5ms)[0m  INSERT INTO "articles" ("articleUrl", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["articleUrl", "LOL"], ["created_at", "2017-07-13 09:46:56.345226"], ["updated_at", "2017-07-13 09:46:56.345226"]]
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:52:34 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (6.0ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 856ms (Views: 843.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/components/article.self-0c0358c713bf76761383f90762c3a229fcc86a0d86f58949871ddf3e6b8a79a2.js?body=1" for ::1 at 2017-07-13 05:52:35 -0400
+
+
+Started GET "/assets/components/article_form.self-4bb9f0811e0e6d98b202db5faa2e4f35a8128833ede219b28e0304241e471bbd.js?body=1" for ::1 at 2017-07-13 05:52:35 -0400
+
+
+Started POST "/articles" for ::1 at 2017-07-13 05:52:40 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"wow", "status"=>"process"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["articleUrl", "wow"], ["status", "process"], ["created_at", "2017-07-13 09:52:40.788621"], ["updated_at", "2017-07-13 09:52:40.788621"]]
+  [1m[36m (5.4ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 634ms (Views: 0.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:52:43 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:53:36 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:53:38 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:55:14 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 5040ms (Views: 5038.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-18245782ce697f392a6f33cf1faabba4a9dd7aa565c182d1e7bc79a23c8f4774.css?body=1" for ::1 at 2017-07-13 05:55:19 -0400
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:55:44 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 05:55:55 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:00:16 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 181ms (Views: 175.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 06:00:22 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"cool", "status"=>"process"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["articleUrl", "cool"], ["status", "process"], ["created_at", "2017-07-13 10:00:22.891152"], ["updated_at", "2017-07-13 10:00:22.891152"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+Completed 200 OK in 198ms (Views: 0.6ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 06:00:24 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"cool", "status"=>"process"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["articleUrl", "cool"], ["status", "process"], ["created_at", "2017-07-13 10:00:24.567291"], ["updated_at", "2017-07-13 10:00:24.567291"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 149ms (Views: 0.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:00:25 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 118ms (Views: 116.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:12:35 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 232ms (Views: 223.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 06:12:44 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"www.cool.com", "status"=>"process"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["articleUrl", "www.cool.com"], ["status", "process"], ["created_at", "2017-07-13 10:12:44.294188"], ["updated_at", "2017-07-13 10:12:44.294188"]]
+  [1m[35m (14.1ms)[0m  COMMIT
+Completed 200 OK in 268ms (Views: 0.6ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 06:12:45 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"www.cool.com", "status"=>"process"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["articleUrl", "www.cool.com"], ["status", "process"], ["created_at", "2017-07-13 10:12:45.640523"], ["updated_at", "2017-07-13 10:12:45.640523"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 137ms (Views: 0.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:12:48 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.4ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 115ms (Views: 113.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 06:12:52 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"w", "status"=>"process"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["articleUrl", "w"], ["status", "process"], ["created_at", "2017-07-13 10:12:53.000066"], ["updated_at", "2017-07-13 10:12:53.000066"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 118ms (Views: 1.0ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 06:12:53 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"w", "status"=>"process"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["articleUrl", "w"], ["status", "process"], ["created_at", "2017-07-13 10:12:53.328995"], ["updated_at", "2017-07-13 10:12:53.328995"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+Completed 200 OK in 122ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:12:54 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 75ms (Views: 74.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:14:23 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 173ms (Views: 172.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 06:14:26 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"aaa", "status"=>"process"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["articleUrl", "aaa"], ["status", "process"], ["created_at", "2017-07-13 10:14:26.886456"], ["updated_at", "2017-07-13 10:14:26.886456"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 142ms (Views: 0.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:14:28 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:54:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 1440ms (Views: 1409.2ms | ActiveRecord: 12.9ms)
+
+
+Started POST "/articles" for ::1 at 2017-07-13 06:54:09 -0400
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"articleUrl"=>"a", "status"=>"process"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "articles" ("articleUrl", "status", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["articleUrl", "a"], ["status", "process"], ["created_at", "2017-07-13 10:54:09.996876"], ["updated_at", "2017-07-13 10:54:09.996876"]]
+  [1m[36m (14.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 691ms (Views: 0.6ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/articles" for ::1 at 2017-07-13 06:54:11 -0400
+Processing by ArticlesController#index as HTML
+  [1m[35mArticle Load (0.3ms)[0m  SELECT "articles".* FROM "articles"
+  Rendered articles/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 72ms (Views: 71.0ms | ActiveRecord: 0.3ms)

@@ -1,0 +1,9 @@
+I" (function() {
+  this.Article = React.createClass({
+    render: function() {
+      return React.DOM.tr(null, React.DOM.td(null, this.props.article.articleUrl), React.DOM.td(null, this.props.article.status), React.DOM.td(null, this.props.article.moodMusicURL));
+    }
+  });
+
+}).call(this);
+:ET
