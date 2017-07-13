@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
 		if @article.save
 			session = GoogleDrive::Session.from_config("config.json")
-			puts session
+			puts article_url
 			render json: @article
 		else
 			render json: @article.errors, status: :unprocessable_entity
