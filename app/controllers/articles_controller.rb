@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
 		@article = Article.new(article_url)
 
 		if @article.save
-			puts 'test'
+			session = GoogleDrive::Session.from_config("config.json")
+			puts session
 			render json: @article
 		else
 			render json: @article.errors, status: :unprocessable_entity
