@@ -66,7 +66,7 @@ PG::ConnectionBad (could not connect to server: No such file or directory
 
 Started GET "/" for ::1 at 2017-07-13 05:26:35 -0400
 
-ActiveRecord::NoDatabaseError (FATAL:  database "ruby-getting-started_development" does not exist
+ActiveRecord::NoDatabaseError (FATAL:  database "heroku-moody-articles_development" does not exist
 ):
   activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:661:in `rescue in connect'
   activerecord (4.2.8) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
