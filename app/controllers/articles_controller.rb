@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 			ws = session.spreadsheet_by_key("1klCFgSwetuuQlkM4llE2hjXQcVZX-wUNkDaWWoVs7ds").worksheets[0]
 			ws.reload
 			ws[(ws.rows.length + 1), 1] = @article.articleUrl
-			ws[(ws.rows.length + 1), 2] = 'process'
+			ws[(ws.rows.length), 2] = 'process'
 			ws.save
 			render json: @article
 			redirect_to :back
