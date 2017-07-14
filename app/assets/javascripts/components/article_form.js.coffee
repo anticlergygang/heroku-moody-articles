@@ -12,7 +12,7 @@
 		e.preventDefault()
 		$.post '', { article: @state }, (data) =>
 			@props.handleNewArticle data
-			@setState @getInitialState()
+			# @setState @getInitialState()
 		, 'JSON'
 	render: ->
 		React.DOM.form
