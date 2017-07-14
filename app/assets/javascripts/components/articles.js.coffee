@@ -13,8 +13,8 @@
 			React.DOM.h3
 				className: 'title'
 				'Enter the URL of a blog article and we will find you some music to listen to while you read.'
-			  React.createElement ArticleForm, handleNewArticle: @addArticle
-			  React.DOM.table
+				React.createElement ArticleForm, handleNewArticle: @addArticle
+				React.DOM.table
 				className: 'table table-bordered'
 				React.DOM.thead null
 					React.DOM.th null, "Article URL"
