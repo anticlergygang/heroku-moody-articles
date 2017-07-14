@@ -1,13 +1,13 @@
 @ArticleForm = React.createClass
 	getInitialState: ->
-		articleUrl: ''
+		articleURL: ''
 	handleValueChange: (e) ->
 		valueName = e.target.name
 		@setState 
 			"#{ valueName }": e.target.value
 			"status": "process"
 	valid: ->
-		@state.articleUrl
+		@state.articleURL
 	handleSubmit: (e) ->
 		e.preventDefault()
 		$.post '', { article: @state }, (data) =>
@@ -24,8 +24,8 @@
 					type: 'text'
 					className: 'form-control'
 					placeholder: 'Enter an articles URL to get some mood music!'
-					name: 'articleUrl'
-					value: @state.articleUrl
+					name: 'articleURL'
+					value: @state.articleURL
 					onChange: @handleValueChange
 				React.DOM.span
 					className: 'input-group-button'
