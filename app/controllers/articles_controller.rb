@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 			ws[(ws.rows.length + 1), 1] = @article.articleUrl
 			ws[(ws.rows.length), 2] = 'process'
 			ws.save
+			ArticleSender.send_article(@article).deliver
 			render json: @article
 		else
 			render json: @article.errors, status: :unprocessable_entity
