@@ -12,8 +12,8 @@
 		e.preventDefault()
 		$.post '', { article: @state }, (data) =>
 			@props.handleNewArticle data
-			# @setState @getInitialState()
 		, 'JSON'
+		@setState @getInitialState()
 	render: ->
 		React.DOM.form
 			className: 'form-input'
