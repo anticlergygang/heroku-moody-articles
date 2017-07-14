@@ -23,7 +23,7 @@
 				React.DOM.input
 					type: 'text'
 					className: 'form-control'
-					placeholder: 'Enter an articles URL to get some mood music!'
+					placeholder: 'ex: https://medium.com/@byrnehobart/the-slow-motion-trainwreck-facing-the-meal-kit-industry-345f14df45ad '
 					name: 'articleUrl'
 					value: @state.articleUrl
 					onChange: @handleValueChange
@@ -33,4 +33,4 @@
 						className: 'btn btn-danger'
 						type: 'submit'
 						disabled: !@valid()
-						'Search for some music!'
+						'Send'

@@ -12,7 +12,7 @@
 			className: 'articles'
 			React.DOM.h3
 				className: 'title'
-				'Enter the URL of a blog article and we will find you some music to listen to while you read.'
+				'Send us a blog atricle that you would like to have anlized by a expert mood musician from ListenLoop.'
 			React.createElement ArticleForm, handleNewArticle: @addArticle
 			React.DOM.table
 				className: 'table table-bordered'
