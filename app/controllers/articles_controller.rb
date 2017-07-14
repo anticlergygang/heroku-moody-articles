@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 		@article = Article.new(article_url)
 
 		if @article.save
+			ArticleMailer.article_email(@article.articleUrl).deliver_now
 			session = GoogleDrive::Session.from_config("config.json")
 			ws = session.spreadsheet_by_key("1klCFgSwetuuQlkM4llE2hjXQcVZX-wUNkDaWWoVs7ds").worksheets[0]
 			ws.reload
