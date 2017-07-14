@@ -1,13 +1,13 @@
 @ArticleForm = React.createClass
 	getInitialState: ->
-		articleUrl: ''
+		articleURL: ''
 	handleValueChange: (e) ->
 		valueName = e.target.name
 		@setState 
 			"#{ valueName }": e.target.value
 			"status": "process"
 	valid: ->
-		@state.articleUrl
+		@state.articleURL
 	handleSubmit: (e) ->
 		e.preventDefault()
 		$.post '', { article: @state }, (data) =>
@@ -16,19 +16,21 @@
 		, 'JSON'
 	render: ->
 		React.DOM.form
-			className: 'form-in'
+			className: 'form-input'
 			onSubmit: @handleSubmit
 			React.DOM.div
-				className: 'form-group'
+				className: 'input-group'
 				React.DOM.input
 					type: 'text'
 					className: 'form-control'
 					placeholder: 'Enter an articles URL to get some mood music!'
-					name: 'articleUrl'
-					value: @state.articleUrl
+					name: 'articleURL'
+					value: @state.articleURL
 					onChange: @handleValueChange
-			React.DOM.button
-				type: 'submit'
-				className: 'btn btn-primary'
-				disabled: !@valid()
-				'Find mood music!'
+				React.DOM.span
+					className: 'input-group-button'
+					React.DOM.button
+						className: 'btn btn-danger'
+						type: 'submit'
+						disabled: !@valid()
+						'Search for some music!'
