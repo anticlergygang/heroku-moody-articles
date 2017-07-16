@@ -1,13 +1,17 @@
 @SortFilterArticlesForm = React.createClass
+	getInitialState: ->
+		sort: 'decending',
+		filter: 'all'
 	handleValueChange: (e) ->
 		valueName = e.target.name
 		@setState 
 			"#{ valueName }": e.target.value
 	handleSubmit: (e) ->
 		e.preventDefault()
-		$.post '', { sortFilter: @state }, (data) =>
+		$.get '', { sortFilter: @state }, (data) =>
 			@props.handleArticleSortFilter data
 		, 'JSON'
+		@setState @getInitialState()
 	render: ->
 		React.DOM.form 
 			React.DOM.div 
