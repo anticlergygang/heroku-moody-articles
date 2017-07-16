@@ -10,49 +10,49 @@
 		, 'JSON'
 	render: ->
 		React.DOM.form 
-			onSubmit: @handleSubmit
-			React.DOM.div
-				className: "form-group"
-				React.DOM.label
-					for: "sort"
-					'Sort'
-				React.DOM.select
-					className: "form-control"
-					id: "sort"
-					React.DOM.option
-						value: 'ascending'
-						'Ascending'
-					React.DOM.option
-						value: 'decending'
-						'Decending'
-			React.DOM.div
-				className: "form-check"
-				React.DOM.label
-					className: "form-check-label"
-					React.DOM.input
-						type: "checkbox"
-						className: "form-check-input"
-						value: "process"
-						'Process'
-			React.DOM.div
-				className: "form-check"
-				React.DOM.label
-					className: "form-check-label"
-					React.DOM.input
-						type: "checkbox"
-						className: "form-check-input"
-						value: "skip"
-						'Skip'
-			React.DOM.div
-				className: "form-check"
-				React.DOM.label
-					className: "form-check-label"
-					React.DOM.input
-						type: "checkbox"
-						className: "form-check-input"
-						value: "complete"
-						'Complete'
-			React.DOM.button
-				type: "submit"
-				className: "btn btn-primary"
-				'Submit'
+			React.DOM.div 
+				className: 'form-inline'
+					React.DOM.div 
+						className: 'form-group'
+							React.DOM.label 
+								for: 'sort'
+								'Sort'
+							React.DOM.select 
+								id: 'sort'
+								React.DOM.option 
+									name: 'sortOption'
+									value: 'decending'
+									'decending'
+								React.DOM.option 
+									name: 'sortOption'
+									value: 'ascending'
+									'ascending'
+					React.DOM.div 
+						className: 'form-group'
+						React.DOM.label 
+							for: 'filter
+							'Filter'
+						React.DOM.select 
+							id: 'filter
+							React.DOM.option 
+								name: 'filterOption'
+								value: 'all'
+								'all'
+							React.DOM.option 
+								name: 'filterOption'
+								value: 'process'
+								'process'
+							React.DOM.option 
+								name: 'filterOption'
+								value: 'skip'
+								'skip'
+							React.DOM.option 
+								name: 'filterOption'
+								value: 'complete'
+								'complete'
+					React.DOM.div 
+						className: 'form-group'
+							React.DOM.button 
+								className: 'btn btn-sm btn-danger'
+								type: 'submit'
+								'Set sort/filter'
