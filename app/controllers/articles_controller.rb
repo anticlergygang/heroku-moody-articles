@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
 	def index
 		@articles = Article.all()
 		if params[:orderFilta]
-			puts 'orders in'
+			puts params[:order]
 		else
 			puts 'no order'
 		end
