@@ -18,7 +18,13 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.all()
-		puts params
+		if params.orderFilta
+			puts 'orders in'
+			puts params.orderFilta
+		else
+			puts 'just some params'
+			puts params
+		end
 	end
 
 	private
