@@ -3,6 +3,6 @@ class ArticleMailer < ApplicationMailer
  
   def article_email(url)
     @url  = url
-    mail(to: 'jasonac1994@gmail.com', subject: 'Someone sent a URL to be analyzed')
+    mail(to: 'find-mood-music@listenloop.com', subject: 'Someone sent a URL to be analyzed!')
   end
 end
