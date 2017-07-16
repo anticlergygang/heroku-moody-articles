@@ -18,6 +18,8 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.all()
+		puts 'herse yar orda'
+		puts order_filta
 	end
 
 	private
