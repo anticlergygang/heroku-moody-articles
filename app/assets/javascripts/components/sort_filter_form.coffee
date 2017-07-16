@@ -30,8 +30,8 @@
 					type: 'text'
 					className: 'form-control'
 					placeholder: 'fliter'
-					name: 'flita'
-					value: @state.flita
+					name: 'filta'
+					value: @state.filta
 					onChange: @handleValueChange
 				React.DOM.span
 					className: 'input-group-button'
