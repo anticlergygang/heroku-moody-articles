@@ -17,16 +17,11 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.all(article_filter)
+		@articles = Article.all()
 	end
 
 	private
 	def article_url
 		params.require(:article).permit(:articleUrl, :status)
-	end
-
-	private
-	def article_filter
-		params.require(:sortFilter).permit(:sort, :filter)
 	end
 end
