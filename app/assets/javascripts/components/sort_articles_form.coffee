@@ -22,10 +22,11 @@
 					React.DOM.option
 						value: 'ascending'
 						'Ascending'
+						onChange: @handleValueChange
 					React.DOM.option
 						value: 'decending'
 						'Decending'
-					onChange: @handleValueChange
+						onChange: @handleValueChange
 			React.DOM.div
 				className: "form-check"
 				React.DOM.label
