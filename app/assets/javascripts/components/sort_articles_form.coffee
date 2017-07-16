@@ -22,11 +22,9 @@
 					React.DOM.option
 						value: 'ascending'
 						'Ascending'
-						onChange: @handleValueChange
 					React.DOM.option
 						value: 'decending'
 						'Decending'
-						onChange: @handleValueChange
 			React.DOM.div
 				className: "form-check"
 				React.DOM.label
@@ -35,7 +33,6 @@
 						type: "checkbox"
 						className: "form-check-input"
 						value: "process"
-						onChange: @handleValueChange
 						'Process'
 			React.DOM.div
 				className: "form-check"
@@ -45,7 +42,6 @@
 						type: "checkbox"
 						className: "form-check-input"
 						value: "skip"
-						onChange: @handleValueChange
 						'Skip'
 			React.DOM.div
 				className: "form-check"
@@ -55,7 +51,6 @@
 						type: "checkbox"
 						className: "form-check-input"
 						value: "complete"
-						onChange: @handleValueChange
 						'Complete'
 			React.DOM.button
 				type: "submit"
