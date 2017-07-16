@@ -24,4 +24,9 @@ class ArticlesController < ApplicationController
 	def article_url
 		params.require(:article).permit(:articleUrl, :status)
 	end
+
+	private
+	def order_filta
+		params.require(:orderFilta).permit(:order, :filta)
+	end
 end

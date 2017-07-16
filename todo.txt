@@ -27,5 +27,3 @@
 # ws.reload
 
 #Add mailer to email 'find-mood-music@listenloop.com' that their is a processing URL in the google spread sheet
-
-#I found out that google spread sheets can auto mail the app with an onEdit() script when the musican edits the google doc, so thats an easy way to update the app.
