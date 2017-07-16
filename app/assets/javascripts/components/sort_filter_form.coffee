@@ -1,4 +1,4 @@
-@SortFiltaForm = React.createClass
+@ArticleOrderFiltaForm = React.createClass
 	getInitialState: ->
 		order: 'decending'
 		filta: 'all'
