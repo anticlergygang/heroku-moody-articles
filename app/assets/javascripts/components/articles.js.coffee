@@ -16,7 +16,7 @@
 			React.DOM.h3
 				className: 'title'
 				'Send us a blog article that you would like to have analyzed by a expert mood musician from ListenLoop.'
-			React.createElement ArticleForm, handleNewArticle: @addArticle, handleNewSortFilter: @sortFilter
+			React.createElement ArticleForm, handleNewArticle: @addArticle
 			React.DOM.table
 				className: 'table table-bordered'
 				React.DOM.thead null
