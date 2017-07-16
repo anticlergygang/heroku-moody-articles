@@ -1,7 +1,4 @@
-@SortArticleForm = React.createClass
-	getInitialState: ->
-		articleOrder: 'descending',
-		articleStatusFilter: ['process','skip','complete']
+@SortFilterArticlesForm = React.createClass
 	handleValueChange: (e) ->
 		valueName = e.target.name
 		@setState 
@@ -13,7 +10,6 @@
 		$.post '', { sortFilter: @state }, (data) =>
 			@props.handleArticleSortFilter data
 		, 'JSON'
-		@setState @getInitialState()
 	render: ->
 		React.DOM.form 
 			onSubmit: @handleSubmit
@@ -31,6 +27,7 @@
 					React.DOM.option
 						value: 'decending'
 						'Decending'
+					onChange: @handleValueChange
 			React.DOM.div
 				className: "form-check"
 				React.DOM.label
@@ -39,6 +36,7 @@
 						type: "checkbox"
 						className: "form-check-input"
 						value: "process"
+						onChange: @handleValueChange
 						'Process'
 			React.DOM.div
 				className: "form-check"
@@ -48,6 +46,7 @@
 						type: "checkbox"
 						className: "form-check-input"
 						value: "skip"
+						onChange: @handleValueChange
 						'Skip'
 			React.DOM.div
 				className: "form-check"
@@ -57,6 +56,7 @@
 						type: "checkbox"
 						className: "form-check-input"
 						value: "complete"
+						onChange: @handleValueChange
 						'Complete'
 			React.DOM.button
 				type: "submit"
