@@ -18,7 +18,7 @@
 				className: 'table table-bordered'
 				React.DOM.thead null
 					React.DOM.th null, "Article URL"
-						onClick: articles.reverse()
+						onClick: @state.articles.reverse()
 					React.DOM.th null, "Status"
 					React.DOM.th null, "Mood Music URL"
 				React.DOM.tbody null,
