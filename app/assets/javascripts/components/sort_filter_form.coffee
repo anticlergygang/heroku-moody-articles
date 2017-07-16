@@ -1,7 +1,7 @@
 @ArticleOrderFiltaForm = React.createClass
 	getInitialState: ->
-		order: 'decending'
-		filta: 'all'
+		order: ''
+		filta: ''
 	handleValueChange: (e) ->
 		valueName = e.target.name
 		@setState "#{ valueName }": e.target.value
@@ -22,14 +22,14 @@
 				React.DOM.input
 					type: 'text'
 					className: 'form-control'
-					placeholder: 'order'
+					placeholder: 'ascending/descending'
 					name: 'order'
 					value: @state.order
 					onChange: @handleValueChange
 				React.DOM.input
 					type: 'text'
 					className: 'form-control'
-					placeholder: 'fliter'
+					placeholder: 'all/process/skip/complete'
 					name: 'filta'
 					value: @state.filta
 					onChange: @handleValueChange
