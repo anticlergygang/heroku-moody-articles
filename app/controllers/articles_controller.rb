@@ -18,6 +18,7 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.all()
+		puts @articles.slice()
 		if params[:orderFilta]
 			puts params[:orderFilta][:order]
 		else
