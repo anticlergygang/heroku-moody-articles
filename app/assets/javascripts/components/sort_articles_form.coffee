@@ -3,8 +3,6 @@
 		valueName = e.target.name
 		@setState 
 			"#{ valueName }": e.target.value
-	valid: ->
-		@state.articleOrder && @state.articleStatusFilter
 	handleSubmit: (e) ->
 		e.preventDefault()
 		$.post '', { sortFilter: @state }, (data) =>
@@ -61,5 +59,4 @@
 			React.DOM.button
 				type: "submit"
 				className: "btn btn-primary"
-				disabled: !@valid()
 				'Submit'
