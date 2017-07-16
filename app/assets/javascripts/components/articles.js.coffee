@@ -7,9 +7,6 @@
 		articles = @state.articles.slice()
 		articles.push article
 		@setState articles: articles
-	sortFilterArticles: (sortFilter) ->
-		console.log 'sortFilter'
-		console.log sortFilter
 	render: ->
 		React.DOM.div
 			className: 'articles'
