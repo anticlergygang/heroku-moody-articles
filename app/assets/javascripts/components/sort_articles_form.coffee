@@ -30,10 +30,10 @@
 					React.DOM.div 
 						className: 'form-group'
 						React.DOM.label 
-							for: 'filter
+							for: 'filter'
 							'Filter'
 						React.DOM.select 
-							id: 'filter
+							id: 'filter'
 							React.DOM.option 
 								name: 'filterOption'
 								value: 'all'
