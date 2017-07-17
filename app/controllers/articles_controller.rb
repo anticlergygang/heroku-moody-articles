@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
 	def index
 		if params[:orderFilta]
 			puts params[:orderFilta][:filta]
-			@articles Article.where(status: params[:orderFilta][:filta])
+			@articles = Article.where(status: params[:orderFilta][:filta])
 			puts @articles
 		else
 			@articles = Article.all()
