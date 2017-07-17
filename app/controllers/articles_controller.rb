@@ -44,29 +44,13 @@ class ArticlesController < ApplicationController
 				end
 				render json: @articles
 			else
-				if params[:orderFilta][:filta] == 'process'
+				if params[:orderFilta][:filta] == 'all'
 					@articles = Article.all()
 					if params[:orderFilta][:order] == 'ascending'
 						@articles = @articles.reverse
 					end
 					render json: @articles
 				else
-					if params[:orderFilta][:filta] == 'skip'
-						@articles = Article.all()
-						if params[:orderFilta][:order] == 'ascending'
-							@articles = @articles.reverse
-						end
-						render json: @articles
-					else
-						if params[:orderFilta][:filta] == 'complete'
-							@articles = Article.all()
-							if params[:orderFilta][:order] == 'ascending'
-								@articles = @articles.reverse
-							end
-							render json: @articles
-						end
-					end
-				end
 			end
 		else
 			@articles = Article.all()
