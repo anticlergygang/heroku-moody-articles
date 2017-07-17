@@ -18,7 +18,6 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.all()
-		puts @articles
 	end
 
 	private

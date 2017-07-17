@@ -8,7 +8,7 @@
 		articles.push article
 		@setState articles: articles
 	doOrderFilta: (orderFilta) ->
-		console.log orderFilta.order
+		console.log orderFilta.filta
 	render: ->
 		React.DOM.div
 			className: 'articles'
