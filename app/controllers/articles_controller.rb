@@ -7,18 +7,12 @@ class ArticlesController < ApplicationController
 		while itt < numRows  do
 			a = Article.where(articleUrl: ws[itt,1]).first
 			if ws[itt,2] != a.status
-				puts 'status change'
 				a.status = ws[itt,2]
 				a.save
-			else
-				puts 'no status change'
 			end
 			if ws[itt,3] != a.moodMusicURL
-				puts 'moodMusicURL change'
 				a.moodMusicURL = ws[itt,3]
 				a.save
-			else
-				puts 'no moodMusicURL change'
 			end
 			itt +=1
 		end

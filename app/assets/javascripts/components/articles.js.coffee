@@ -4,12 +4,10 @@
 	getDefaultProps: ->
 		articles: []
 	addArticle: (article) ->
-		console.log 'omgomgomg'
 		articles = @state.articles.slice()
 		articles.push article
 		@setState articles: articles
 	doOrderFilta: (orderFilta) ->
-		console.log orderFilta
 		@setState articles: orderFilta
 	render: ->
 		React.DOM.div
