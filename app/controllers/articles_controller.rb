@@ -11,6 +11,8 @@ class ArticlesController < ApplicationController
 			puts Article.where(articleUrl: ws[itt,1]).first.status
 			if ws[itt,2] != Article.where(articleUrl: ws[itt,1]).first.status
 				puts 'status change'
+				Article.where(articleUrl: ws[itt,1]).first.status = ws[itt,2]
+				Article.where(articleUrl: ws[itt,1]).first.status.save
 			else
 				puts 'no status change'
 			end
