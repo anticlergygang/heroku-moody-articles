@@ -5,13 +5,9 @@ class ArticlesController < ApplicationController
 		itt = 1
 		numRows = ws.num_rows + 1
 		while itt < numRows  do
-			puts ws[itt,1]
-			puts Article.where(articleUrl: ws[itt,1]).first.articleUrl
-			puts ws[itt,2]
-			puts Article.where(articleUrl: ws[itt,1]).first.status
 			if ws[itt,2] != Article.where(articleUrl: ws[itt,1]).first.status
 				puts 'status change'
-				Article.where(articleUrl: ws[itt,1]).first.update_attributes {:status => ws[itt,2]}
+				Article.where(articleUrl: ws[itt,1]).first.update_attributes {:status ws[itt,2]}
 			else
 				puts 'no status change'
 			end
