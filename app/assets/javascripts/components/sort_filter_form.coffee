@@ -9,7 +9,7 @@
 		@state.order && @state.filta
 	handleSubmitOrderFilta: (e) ->
 		e.preventDefault()
-		$.post '', { orderFilta: @state }, (data) =>
+		$.get '', (data) =>
 			@props.handleNewOrderFilta data
 		, 'JSON'
 		@setState @getInitialState()
