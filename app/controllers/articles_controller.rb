@@ -17,12 +17,13 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		@articles = Article.all()
-		puts @articles
 		if params[:orderFilta]
-			puts params[:orderFilta][:order]
+			puts params[:orderFilta][:filta]
+			@articles Article.where(status: params[:orderFilta][:filta])
+			puts @articles
 		else
-			puts 'no order'
+			@articles = Article.all()
+			puts @articles
 		end
 	end
 
