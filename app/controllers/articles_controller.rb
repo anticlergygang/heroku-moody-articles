@@ -5,10 +5,11 @@ class ArticlesController < ApplicationController
 		itt = 1
 		numRows = ws.num_rows + 1
 		while itt < numRows  do
-			if ws[itt,2] != Article.where(articleUrl: ws[itt,1]).first.status
+			a = Article.where(articleUrl: ws[itt,1]).first
+			if ws[itt,2] != a.status
 				puts 'status change'
-				Article.where(articleUrl: ws[itt,1]).first.status = ws[itt,2]
-				Article.where(articleUrl: ws[itt,1]).first.save
+				a.status = ws[itt,2]
+				a.save
 			else
 				puts 'no status change'
 			end
