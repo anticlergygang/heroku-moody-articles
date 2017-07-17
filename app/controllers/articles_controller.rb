@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
 						@articles = @articles.reverse
 					end
 					render json: @articles
-				else
+				end
 			end
 		else
 			@articles = Article.all()
