@@ -9,10 +9,11 @@
 		@state.order && @state.filta
 	handleSubmitOrderFilta: (e) ->
 		e.preventDefault()
-		$.get '', (data) =>
+		$.get '', { orderFilta: @state }, (data) =>
 			@props.handleNewOrderFilta data
 		, 'JSON'
-		@setState @getInitialState()
+		@setState
+		@getInitialState()
 	render: ->
 		React.DOM.form
 			className: 'form-input'
