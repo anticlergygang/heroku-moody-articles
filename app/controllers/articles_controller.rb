@@ -14,11 +14,11 @@ class ArticlesController < ApplicationController
 				puts 'no status change'
 			end
 			if ws[itt,3] != a.moodMusicURL
-				puts 'status change'
-				a.status = ws[itt,3]
+				puts 'moodMusicURL change'
+				a.moodMusicURL = ws[itt,3]
 				a.save
 			else
-				puts 'no status change'
+				puts 'no moodMusicURL change'
 			end
 			itt +=1
 		end
