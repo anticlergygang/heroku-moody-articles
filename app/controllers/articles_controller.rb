@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
 		numRows = ws.num_rows + 1
 		while itt < numRows  do
 		   puts ws[itt,1]
-		   puts Article.where(articleUrl: ws[itt,1]).select("articleUrl")
+		   puts Article.where(articleUrl: ws[itt,1]).select(:articleUrl).first
 		   itt +=1
 		end
 	end
