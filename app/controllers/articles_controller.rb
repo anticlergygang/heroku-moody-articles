@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 		itt = 1
 		numRows = ws.num_rows
 		while itt < numRows  do
-		   puts ws[i,1]
+		   puts ws[itt,1]
 		   itt +=1
 		end
 	end
