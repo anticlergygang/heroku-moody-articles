@@ -4,6 +4,7 @@
 	getDefaultProps: ->
 		articles: []
 	addArticle: (article) ->
+		console.log 'omgomgomg'
 		articles = @state.articles.slice()
 		articles.push article
 		@setState articles: articles
