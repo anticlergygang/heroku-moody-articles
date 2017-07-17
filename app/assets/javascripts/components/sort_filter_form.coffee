@@ -12,8 +12,7 @@
 		$.get '', { orderFilta: @state }, (data) =>
 			@props.handleNewOrderFilta data
 		, 'JSON'
-		@setState
-		@getInitialState()
+		@setState @getInitialState()
 	render: ->
 		React.DOM.form
 			className: 'form-input'

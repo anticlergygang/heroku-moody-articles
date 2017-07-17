@@ -18,14 +18,16 @@ class ArticlesController < ApplicationController
 
 	def index
 		if params[:orderFilta] and params[:orderFilta][:filta] != 'all'
+			puts 'Filter: '
 			puts params[:orderFilta][:filta]
 			@articles = Article.where(status: params[:orderFilta][:filta])
+			puts 'Articles: '
 			puts @articles
 		else
 			@articles = Article.all()
+			puts 'Articles: '
 			puts @articles
 		end
-		render
 	end
 
 	private
