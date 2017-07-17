@@ -27,6 +27,7 @@ class ArticlesController < ApplicationController
 			@articles = Article.all()
 			puts 'Articles: '
 			puts @articles
+			render json: @articles
 		end
 	end
 
