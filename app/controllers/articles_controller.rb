@@ -2,9 +2,7 @@ class ArticlesController < ApplicationController
 	def checkSheetForChanges()
 		session = GoogleDrive::Session.from_config("config.json")
 		ws = session.spreadsheet_by_key("1klCFgSwetuuQlkM4llE2hjXQcVZX-wUNkDaWWoVs7ds").worksheets[0]
-		ws.num_rows.each do |row|
-			puts ws[row, 1]
-		end
+		puts ws.num_rows
 	end
 
 	def create
