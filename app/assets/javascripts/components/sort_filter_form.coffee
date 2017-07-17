@@ -6,7 +6,7 @@
 		valueName = e.target.name
 		@setState "#{ valueName }": e.target.value
 	valid: ->
-		@state.order || @state.filta
+		@state.filta
 	handleSubmitOrderFilta: (e) ->
 		e.preventDefault()
 		$.get '', { orderFilta: @state }, (data) =>
@@ -39,4 +39,4 @@
 						className: 'btn btn-danger'
 						type: 'submit'
 						disabled: !@valid()
-						'Send'
+						'Set Order/Fliter'
