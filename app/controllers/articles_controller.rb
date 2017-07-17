@@ -3,9 +3,10 @@ class ArticlesController < ApplicationController
 		session = GoogleDrive::Session.from_config("config.json")
 		ws = session.spreadsheet_by_key("1klCFgSwetuuQlkM4llE2hjXQcVZX-wUNkDaWWoVs7ds").worksheets[0]
 		itt = 1
-		numRows = ws.num_rows
+		numRows = ws.num_rows + 1
 		while itt < numRows  do
 		   puts ws[itt,1]
+		   puts Article.where(id: itt)
 		   itt +=1
 		end
 	end
