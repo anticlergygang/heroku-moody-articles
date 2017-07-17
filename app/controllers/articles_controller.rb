@@ -16,18 +16,25 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
-		if params[:orderFilta] and params[:orderFilta][:filta] != 'all'
-			puts 'Filter: '
-			puts params[:orderFilta][:filta]
-			@articles = Article.where(status: params[:orderFilta][:filta])
-			puts 'Articles: '
-			puts @articles
-			render json: @articles
+		if params[:orderFilta]
+			if params[:orderFilta][:filta] == 'all'
+				puts 'Filter: all'
+				@articles = Article.all()
+				puts 'Articles: '
+				puts @articles
+				render json: @articles
+			else
+				puts 'Filter: '
+				puts params[:orderFilta][:filta]
+				@articles = Article.where(status: params[:orderFilta][:filta])
+				puts 'Articles: '
+				puts @articles
+				render json: @articles
+			end
 		else
 			@articles = Article.all()
 			puts 'Articles: '
 			puts @articles
-			render json: @articles
 		end
 	end
 
