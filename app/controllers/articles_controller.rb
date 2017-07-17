@@ -1,11 +1,20 @@
 class ArticlesController < ApplicationController
+	def checkSheetForChanges()
+		session = GoogleDrive::Session.from_config("config.json")
+		ws = session.spreadsheet_by_key("1klCFgSwetuuQlkM4llE2hjXQcVZX-wUNkDaWWoVs7ds").worksheets[0]
+		puts 'ws.rows'
+		puts ws.rows
+		puts 'Article.all()'
+		puts Article.all()
+	end
+
 	def create
 		@article = Article.new(article_url)
 		if @article.save
+			checkSheetForChanges
+			ArticleMailer.article_email(@article.articleUrl).deliver_now
 			session = GoogleDrive::Session.from_config("config.json")
 			ws = session.spreadsheet_by_key("1klCFgSwetuuQlkM4llE2hjXQcVZX-wUNkDaWWoVs7ds").worksheets[0]
-			ArticleMailer.article_email(@article.articleUrl).deliver_now
-			ws.reload
 			ws[(ws.rows.length + 1), 1] = @article.articleUrl
 			ws[(ws.rows.length), 2] = 'process'
 			ws.save
@@ -16,25 +25,17 @@ class ArticlesController < ApplicationController
 	end
 
 	def index
+		checkSheetForChanges
 		if params[:orderFilta]
 			if params[:orderFilta][:filta] == 'all'
-				puts 'Filter: all'
 				@articles = Article.all()
-				puts 'Articles: '
-				puts @articles
 				render json: @articles
 			else
-				puts 'Filter: '
-				puts params[:orderFilta][:filta]
 				@articles = Article.where(status: params[:orderFilta][:filta])
-				puts 'Articles: '
-				puts @articles
 				render json: @articles
 			end
 		else
 			@articles = Article.all()
-			puts 'Articles: '
-			puts @articles
 		end
 	end
 
