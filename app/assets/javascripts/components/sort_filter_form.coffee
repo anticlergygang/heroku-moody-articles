@@ -6,7 +6,7 @@
 		valueName = e.target.name
 		@setState "#{ valueName }": e.target.value
 	valid: ->
-		@state.filta
+		@state.order || @state.filta
 	handleSubmitOrderFilta: (e) ->
 		e.preventDefault()
 		$.get '', { orderFilta: @state }, (data) =>
