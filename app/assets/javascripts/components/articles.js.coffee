@@ -10,6 +10,7 @@
 		@setState articles: articles
 	doOrderFilta: (orderFilta) ->
 		console.log orderFilta
+		@setState articles: orderFilta
 	render: ->
 		React.DOM.div
 			className: 'articles'
