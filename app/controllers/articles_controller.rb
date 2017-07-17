@@ -7,7 +7,8 @@ class ArticlesController < ApplicationController
 		while itt < numRows  do
 			if ws[itt,2] != Article.where(articleUrl: ws[itt,1]).first.status
 				puts 'status change'
-				Article.where(articleUrl: ws[itt,1]).first.update_attributes {:status => ws[itt,2]}
+				Article.where(articleUrl: ws[itt,1]).first.status = ws[itt,2]
+				Article.where(articleUrl: ws[itt,1]).save
 			else
 				puts 'no status change'
 			end
