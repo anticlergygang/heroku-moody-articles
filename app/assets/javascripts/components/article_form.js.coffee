@@ -33,4 +33,4 @@
 						className: 'btn btn-danger'
 						type: 'submit'
 						disabled: !@valid()
-						'Send'
+						'Send Article URL'
