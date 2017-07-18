@@ -39,13 +39,13 @@ class ArticlesController < ApplicationController
 		if params[:orderFilta]
 			if params[:orderFilta][:filta] == 'all'
 				@articles = Article.all()
-				if params[:orderFilta][:order] == 'ascending'
+				if params[:orderFilta][:order] == 'asc'
 					@articles = @articles.reverse
 				end
 				render json: @articles
 			else
 				@articles = Article.where(status: params[:orderFilta][:filta])
-				if params[:orderFilta][:order] == 'ascending'
+				if params[:orderFilta][:order] == 'asc'
 					@articles = @articles.reverse
 				end
 				render json: @articles

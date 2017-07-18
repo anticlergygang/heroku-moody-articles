@@ -6,7 +6,7 @@
 		valueName = e.target.name
 		@setState "#{ valueName }": e.target.value
 	valid: ->
-		(@state.order == 'a' || @state.order == 'd') && (@state.filta == 'a' || @state.filta == 'p' || @state.filta == 'c' || @state.filta == 's')
+		(@state.order == 'asc' || @state.order == 'desc') && (@state.filta == 'all' || @state.filta == 'process' || @state.filta == 'complete' || @state.filta == 'skip')
 	handleSubmitOrderFilta: (e) ->
 		e.preventDefault()
 		$.get '', { orderFilta: @state }, (data) =>
@@ -22,14 +22,14 @@
 				React.DOM.input
 					type: 'text'
 					className: 'form-control'
-					placeholder: '(a)scending/(d)escending'
+					placeholder: 'asc/desc'
 					name: 'order'
 					value: @state.order
 					onChange: @handleValueChange
 				React.DOM.input
 					type: 'text'
 					className: 'form-control'
-					placeholder: '(a)ll/(p)rocess/(s)kip/(c)omplete'
+					placeholder: 'all/process/skip/complete'
 					name: 'filta'
 					value: @state.filta
 					onChange: @handleValueChange
