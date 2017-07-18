@@ -14,7 +14,7 @@
 			className: 'articles'
 			React.DOM.h3
 				className: 'title'
-				'Send us a blog article that you would like to have analyzed by a expert mood musician from ListenLoop.'
+				'Send us a blog article that you would like to have analyzed by an expert mood musician from ListenLoop.'
 			React.createElement ArticleForm, handleNewArticle: @addArticle
 			React.createElement ArticleOrderFiltaForm, handleNewOrderFilta: @doOrderFilta
 			React.DOM.table
